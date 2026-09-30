@@ -47,7 +47,7 @@ description: 当用户要写短视频口播稿/带货文案/种草脚本，问�
 ## 与上下游衔接
 
 - **上游**：选题卡不够具体就先回 iskill-hot-topic-scout 补；用户只给了模糊想法时，先帮他把选题卡字段口述补齐再动笔。
-- **下游**：稿子写完**必须提醒**：下一步交给 iskill-copy-deslop 去 AI 味 + 模拟观众点评，再过 iskill-content-precheck 预检。
+- **下游**：稿子写完**必须提醒**：下一步交给 iskill-copy-deslop 去 AI 味 + 模拟观众点评，再过 iskill-content-precheck 预检，放行后由 iskill-video-clipper 出成片/剪映草稿。
 
 ## 注意事项
 
