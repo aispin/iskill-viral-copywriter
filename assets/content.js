@@ -36,16 +36,19 @@ window.PROMO = {
         meta2: "全平台",
         meta3: "广告法初筛"
       },
-      terminal: {
-        title: "zsh — iskill-viral-copywriter",
-        lines: [
-          [{ t: "$ ", c: "p" }, { t: "按这个选题卡写一条 45s 口播稿，目的是涨粉", c: "k" }],
-          [{ t: "【钩子】", c: "s" }, { t: "你以为在农村拍视频得靠设备？错。", c: "c" }],
-          [{ t: "【痛点】", c: "s" }, { t: "手机一架就开拍的人，反而条条上热门。", c: "c" }],
-          [{ t: "【价值】", c: "s" }, { t: "今天说三个零成本的取景位……", c: "c" }],
-          [{ t: "✓ ", c: "p" }, { t: "已写入 viral-video-team-output/文案/…-口播稿.md", c: "s" }]
+      chat: {
+        title: "AI Agent · 对话现场",
+        status: "在线",
+        userLabel: "你",
+        agentLabel: "AI",
+        messages: [
+          { role: "user", text: "按这个选题卡写一版 30 秒口播稿" },
+          { role: "agent", text: "按爆款结构写：前三秒钩子、中段痛点、结尾行动；15s / 30s / 60s 三档都能出。", tag: "已读 选题卡" },
+          { role: "user", text: "开头不够抓人" },
+          { role: "agent", text: "换钩子重写：陈述句改成反问或冲突，第一句就给具体场景和数字。" }
         ]
       },
+
 
       stats: [
         { value: "0", label: "脚本与依赖", note: "纯提示词 —— 任何能读 SKILL.md 的 agent 都能用" },
@@ -154,16 +157,19 @@ window.PROMO = {
         meta2: "All platforms",
         meta3: "Ad-law screen"
       },
-      terminal: {
-        title: "zsh — iskill-viral-copywriter",
-        lines: [
-          [{ t: "$ ", c: "p" }, { t: "write a 45s script from this topic card, goal: grow followers", c: "k" }],
-          [{ t: "[hook]", c: "s" }, { t: "You think filming in the countryside needs gear? Wrong.", c: "c" }],
-          [{ t: "[pain]", c: "s" }, { t: "People who just prop up a phone post hits after hits.", c: "c" }],
-          [{ t: "[value]", c: "s" }, { t: "Three zero-cost shooting spots today...", c: "c" }],
-          [{ t: "✓ ", c: "p" }, { t: "written to viral-video-team-output/文案/…-口播稿.md", c: "s" }]
+      chat: {
+        title: "AI Agent · live session",
+        status: "online",
+        userLabel: "You",
+        agentLabel: "AI",
+        messages: [
+          { role: "user", text: "Write a 30-second script from this topic card" },
+          { role: "agent", text: "Built on the viral structure: hook in the first three seconds, pain point in the middle, call to action at the end. I can do 15s, 30s or 60s.", tag: "read topic card" },
+          { role: "user", text: "The opening doesn't grab me" },
+          { role: "agent", text: "Rewrite the hook: turn the statement into a question or a conflict, and put a concrete scene and a number in the first line." }
         ]
       },
+
 
       stats: [
         { value: "0", label: "scripts and dependencies", note: "pure prompt — any agent that reads SKILL.md can use it" },
