@@ -101,27 +101,14 @@ window.PROMO = {
       steps: {
         eyebrow: "上手",
         title: "三步跑起来",
-        sub: "",
+        sub: "命令由 agent 跑，你只说要什么、看结果。",
         items: [
-          {
-            title: "交给 AI 装",
-            desc: "把提示词粘进对话框，agent 会自己拉代码、读文档，再告诉你怎么用。",
-            codeKey: "install"
-          },
-          {
-            title: "把选题卡交给它写稿",
-            desc: "选题卡是必需输入；缺字段它会先帮你把要点口述补齐再动笔。",
-            codeName: "prompt",
-            code: "按 viral-video-team-output/选题/2026-10-02-选题.md 写一条 45s 口播稿，目的是涨粉"
-          },
-          {
-            title: "稿子定了再出发布文案",
-            desc: "输入定稿的 v2 口播稿，产出标题 / 描述 / 标签；之后一起送预检。",
-            codeName: "prompt",
-            code: "根据这条口播稿的定稿内容，出一版发布文案：3-5 组标题 + 描述 + 标签"
-          }
+          { title: "交给 AI 装", desc: "把这句话粘进对话框，agent 会自己拉代码、读文档，再告诉你用法。", codeKey: "install" },
+          { title: "把选题卡交给它", desc: "有拆解报告一起给它，结构会更贴；时长和钩子说清。", codeName: "prompt", code: "按这个选题卡写一版 30 秒口播稿，开头三秒要钩住人。" },
+          { title: "念一遍", desc: "稿子直接回在对话里，你念一遍看顺不顺口；要更口语就让它再过一遍 iskill-copy-deslop。" }
         ]
       },
+
 
       faq: {
         eyebrow: "问答",
@@ -232,27 +219,14 @@ window.PROMO = {
       steps: {
         eyebrow: "Get started",
         title: "Up and running in three steps",
-        sub: "",
+        sub: "The agent runs the commands. You say what you want and check the result.",
         items: [
-          {
-            title: "Let your agent install it",
-            desc: "Paste the line into the chat — it clones the repo, reads the docs, and tells you how to use it.",
-            codeKey: "install"
-          },
-          {
-            title: "Hand it your topic card",
-            desc: "The topic card is required; if fields are missing it fills the gaps with you before writing.",
-            codeName: "prompt",
-            code: "Write a 45s script from viral-video-team-output/选题/2026-10-02-选题.md, goal: grow followers"
-          },
-          {
-            title: "Draft the publish copy once the script is final",
-            desc: "Give it the approved v2 script and it produces titles, a description and tags; then send both to pre-check.",
-            codeName: "prompt",
-            code: "Based on this final script, draft the publish copy: 3-5 titles + description + tags"
-          }
+          { title: "Let your agent install it", desc: "Paste the line into the chat — it clones the repo, reads the docs, and tells you how to use it.", codeKey: "install" },
+          { title: "Hand it the topic card", desc: "Give it a teardown report too and the structure lands closer to what works. Say the length and the hook.", codeName: "prompt", code: "Write a 30-second script from this topic card — hook me in the first three seconds." },
+          { title: "Read it out loud", desc: "The script comes back in chat — read it aloud. Want it more colloquial? Send it through iskill-copy-deslop." }
         ]
       },
+
 
       faq: {
         eyebrow: "FAQ",
