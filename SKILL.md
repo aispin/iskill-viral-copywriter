@@ -100,3 +100,15 @@ description: 当用户要写短视频口播稿/带货文案/种草脚本，问�
 - 遵守广告法初筛口径：不写极限词（最/第一/国家级）、不承诺疗效收益、数据要能给出处。
 - 不写画面分镜（那是剪辑的事），除非用户明确要「脚本级」输出——此时每句配一行画面提示。
 - 用户给了自家历史爆款做参考时，优先模仿其句式节奏，而不是通稿模板。
+
+## 依赖同步
+
+本仓库 `promo-page/assets/{app.js,style.css,icons.js}` 是 [iskill-promo-page](https://github.com/aispin/iskill-promo-page)
+模板引擎的 vendored 副本（锁定版本见 `package.json` 的 `iskillDeps`），**不要手改**——
+去真源仓库改并升 `@iskill-version`，再用 iskill-dep-sync 同步回来（本机无该工具时按下面自举）：
+
+```bash
+T="$HOME/.workbuddy/skills/iskill-dep-sync/scripts/skill-deps.mjs"
+[ -f "$T" ] || { TMP="$(mktemp -d)"; curl -fsSL "https://raw.githubusercontent.com/aispin/iskill-dep-sync/HEAD/scripts/skill-deps.mjs" -o "$TMP/skill-deps.mjs"; T="$TMP/skill-deps.mjs"; }
+node "$T" check "$(pwd)"     # 漂移检测；node "$T" sync "$(pwd)" 恢复/升级；node "$T" env "$(pwd)" 冷启动自检
+```
